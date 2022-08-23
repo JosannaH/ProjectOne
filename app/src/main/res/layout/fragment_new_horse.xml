@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewHorseFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tvTitle"
+        android:text="@string/new_horse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etName"
+        style="@style/etStyle"
+        android:hint="@string/horse_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvChooseAnimalType"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="@string/animal_type"
+        app:layout_constraintBottom_toTopOf="@+id/spGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <Spinner
+        android:id="@+id/spAnimalType"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/animal_types"
+        android:padding="24dp"
+        app:layout_constraintStart_toEndOf="@+id/tvChooseAnimalType"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <TextView
+        android:id="@+id/tvChooseGender"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:text="@string/gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spAnimalType" />
+
+    <Spinner
+        android:id="@+id/spGender"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/genders"
+        android:padding="24dp"
+        app:layout_constraintStart_toEndOf="@+id/tvChooseGender"
+        app:layout_constraintTop_toBottomOf="@+id/spAnimalType" />
+
+    <EditText
+        android:id="@+id/etBirthYear"
+        style="@style/etStyle"
+        android:hint="@string/birth_year"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spGender" />
+
+    <EditText
+        android:id="@+id/etIdNumber"
+        style="@style/etStyle"
+        android:hint="@string/id_number"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBirthYear"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/btnStyle"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIdNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

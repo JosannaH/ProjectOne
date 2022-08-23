@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Farrier Journal</string>
+    <string name="new_horse">New Horse</string>
+    <string name="new_customer">New Customer</string>
+    <string name="new_entry">New Entry</string>
+    <string name="plus_new">+ New</string>
+    <string name="phone">Phone</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="save">Save</string>
+    <string name="email">Email</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="horse_name">Horse Name</string>
+    <string name="birth_year">Birth Year</string>
+    <string name="id_number">ID Number</string>
+    <string name="animal_type">Animal Type</string>
+    <string name="gender">Gender</string>
+    <string name="street">Street</string>
+    <string name="post_code">Post Code</string>
+    <string name="city">City</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string-array name="genders">
+        <item>Mare</item>
+        <item>Stallion</item>
+        <item>Gelding</item>
+    </string-array>
+
+    <string-array name="animal_types">
+        <item>Horse</item>
+        <item>Donkey</item>
+        <item>Mule</item>
+        <item>Other</item>
+    </string-array>
+
+</resources>
