@@ -1,9 +1,10 @@
-package com.josanna.projectone
+package com.josanna.projectone.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import com.josanna.projectone.R
 import com.josanna.projectone.databinding.FragmentNewEntryBinding
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter

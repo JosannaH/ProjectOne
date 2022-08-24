@@ -1,12 +1,10 @@
-package com.josanna.projectone
+package com.josanna.projectone.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.josanna.projectone.R
 import com.josanna.projectone.databinding.FragmentNewCustomerBinding
-import com.josanna.projectone.databinding.FragmentNewHorseBinding
 
 class NewCustomerFragment : Fragment(R.layout.fragment_new_customer) {
 

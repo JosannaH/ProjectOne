@@ -1,10 +1,9 @@
-package com.josanna.projectone
+package com.josanna.projectone.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import com.josanna.projectone.R
 import com.josanna.projectone.databinding.FragmentMainMenuBinding
 
 class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {

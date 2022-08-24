@@ -1,4 +1,4 @@
-package com.josanna.projectone
+package com.josanna.projectone.database
 
 import androidx.room.*
 import androidx.room.Dao

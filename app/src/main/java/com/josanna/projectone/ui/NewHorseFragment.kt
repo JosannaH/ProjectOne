@@ -1,9 +1,11 @@
-package com.josanna.projectone
+package com.josanna.projectone.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import com.josanna.projectone.R
 import com.josanna.projectone.databinding.FragmentNewHorseBinding
+import com.josanna.projectone.entities.Horse
 
 class NewHorseFragment : Fragment(R.layout.fragment_new_horse) {
 

@@ -1,4 +1,4 @@
-package com.josanna.projectone
+package com.josanna.projectone.database
 
 import android.content.Context
 import androidx.room.Database
