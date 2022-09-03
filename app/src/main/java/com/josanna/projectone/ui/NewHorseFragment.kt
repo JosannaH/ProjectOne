@@ -21,6 +21,7 @@ class NewHorseFragment : Fragment(R.layout.fragment_new_horse) {
             val gender = b.spGender.toString()
             val birthYear = b.etBirthYear
             val id = b.etIdNumber
+            val notes = b.etNotes
 
             //TODO: Save to database
         }

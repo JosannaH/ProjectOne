@@ -22,6 +22,7 @@ class NewCustomerFragment : Fragment(R.layout.fragment_new_customer) {
             val city = b.etCity
             val phone = b.etPhone.toString()
             val email = b.etEmail.toString()
+            val notes = b.etNotes
 
             //TODO: Save to database
         }

@@ -5,11 +5,11 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Entry(
-        @PrimaryKey
+        @PrimaryKey(autoGenerate = true)
         val entryId: Int,
         val date: String,
         val time: String,
-        val note: String, //or record?
+        val note: String,
         val user: String,
         val horseId: Int,
         val userId: Int

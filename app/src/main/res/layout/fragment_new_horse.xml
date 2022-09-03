@@ -82,12 +82,22 @@
         app:layout_constraintTop_toBottomOf="@+id/etBirthYear"
         tools:ignore="TextFields" />
 
+    <EditText
+        android:id="@+id/etNotes"
+        style="@style/etStyle"
+        android:hint="@string/notes"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIdNumber"
+        android:inputType="text" />
+
     <Button
         android:id="@+id/btnSave"
         style="@style/btnStyle"
         android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIdNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/etNotes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
