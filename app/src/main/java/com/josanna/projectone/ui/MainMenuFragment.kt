@@ -43,5 +43,15 @@ class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
                 commit()
             }
         }
+
+        b.btnShowHorses.setOnClickListener {
+            val fragmentShowHorses = ShowHorsesFragment()
+
+            requireActivity().supportFragmentManager.beginTransaction().apply {
+                replace(R.id.flFragment, fragmentShowHorses)
+                addToBackStack(null)
+                commit()
+            }
+        }
     }
 }

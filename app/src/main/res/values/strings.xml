@@ -21,6 +21,8 @@
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="notes">notes</string>
+    <string name="show_horses">Show Horses</string>
+    <string name="all_horses">All Horses</string>
 
     <string-array name="genders">
         <item>Mare</item>

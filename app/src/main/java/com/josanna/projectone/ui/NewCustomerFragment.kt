@@ -12,6 +12,7 @@ class NewCustomerFragment : Fragment(R.layout.fragment_new_customer) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         b = FragmentNewCustomerBinding.bind(view)
 
         b.btnSave.setOnClickListener {
