@@ -23,6 +23,9 @@
     <string name="notes">notes</string>
     <string name="show_horses">Show Horses</string>
     <string name="all_horses">All Horses</string>
+    <string name="Fill_in_birth_year">Fill in birth year, only numbers</string>
+    <string name="fill_in_name">Fill in name</string>
+    <string name="fill_in_identification">Fill in identification</string>
 
     <string-array name="genders">
         <item>Mare</item>

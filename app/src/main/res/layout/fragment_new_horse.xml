@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spGender" />
 
     <EditText
-        android:id="@+id/etIdNumber"
+        android:id="@+id/etIdentification"
         style="@style/etStyle"
         android:hint="@string/id_number"
         android:importantForAutofill="no"
@@ -89,7 +89,7 @@
         android:importantForAutofill="no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etIdNumber"
+        app:layout_constraintTop_toBottomOf="@+id/etIdentification"
         android:inputType="text" />
 
     <Button

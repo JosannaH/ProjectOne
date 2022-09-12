@@ -12,6 +12,6 @@ data class Horse(
         val gender: String,
         val birthYear: String,
         val identification: String,
-        val notes: String,
+        val notes: String?,
         val customerId: Int
 )

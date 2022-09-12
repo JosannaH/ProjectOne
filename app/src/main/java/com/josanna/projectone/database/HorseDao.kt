@@ -10,16 +10,19 @@ import com.josanna.projectone.entities.relations.CustomerWithHorses
 import com.josanna.projectone.entities.relations.HorseWithEntries
 import com.josanna.projectone.entities.relations.UserWithEntries
 
-// Data Access Object
 @Dao
 interface HorseDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertHorse(horse: Horse)
+    suspend fun upsertHorse(horse: Horse)
 
     @Transaction
     @Query("SELECT * FROM horse ORDER BY name ASC")
+    //TODO: Do I need to return LiveData here?
     suspend fun getAllHorses(): List<Horse>
+
+    @Delete
+    suspend fun deleteHorse(horse: Horse)
 
     // get list of entries for horse
     @Transaction
