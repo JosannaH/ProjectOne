@@ -26,6 +26,7 @@
     <string name="Fill_in_birth_year">Fill in birth year, only numbers</string>
     <string name="fill_in_name">Fill in name</string>
     <string name="fill_in_identification">Fill in identification</string>
+    <string name="horse_is_saved">Horse is saved</string>
 
     <string-array name="genders">
         <item>Mare</item>

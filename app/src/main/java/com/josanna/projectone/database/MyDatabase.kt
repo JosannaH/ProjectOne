@@ -21,17 +21,21 @@ import com.josanna.projectone.entities.User
 
 abstract class MyDatabase : RoomDatabase(){
 
-    abstract val myDao: MyDao
+    abstract fun getHorseDao(): HorseDao
+    abstract fun getCustomerDao(): CustomerDao
+    abstract fun getEntryDao(): EntryDao
+    abstract fun getUserDao(): UserDao
+
 
     //singleton
     companion object {
-        // if value of INSTANCE is changed, it's immediately visible
+        // Volatile = if value of INSTANCE is changed, it's immediately visible
         // to other threads
         @Volatile
         private var INSTANCE: MyDatabase? = null
 
         fun getInstance(context: Context): MyDatabase {
-            // only one threaad at a time can access database
+            // only one thread at a time can access database
             synchronized(this){
                 return INSTANCE ?: Room.databaseBuilder(
                     context.applicationContext,
