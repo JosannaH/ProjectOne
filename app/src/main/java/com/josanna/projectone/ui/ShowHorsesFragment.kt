@@ -1,42 +1,44 @@
 package com.josanna.projectone.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.josanna.projectone.R
 import com.josanna.projectone.ShowHorsesAdapter
+import com.josanna.projectone.database.MyDatabase
 import com.josanna.projectone.databinding.FragmentNewHorseBinding
 import com.josanna.projectone.databinding.FragmentShowHorsesBinding
 import com.josanna.projectone.entities.Horse
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class ShowHorsesFragment : Fragment(R.layout.fragment_show_horses) {
 
-    private lateinit var b : FragmentShowHorsesBinding
+    private lateinit var b: FragmentShowHorsesBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         b = FragmentShowHorsesBinding.bind(view)
 
-        //TODO fill list with horses from db
-        var horseList = mutableListOf<Horse>()
+        val db = MyDatabase.getInstance(requireContext())
+        var horseList = listOf<Horse>()
 
+        runBlocking {
 
-        //test
-        val testHorse1 = Horse(1, "Lotta", "Horse", "Mare", "2016", "652587458", "kobent", 2 )
-        val testHorse2 = Horse(2, "Stjerna", "Horse", "Mare", "2014", "652578558", "Mamma till tre", 1 )
-        horseList.add(testHorse1)
-        horseList.add(testHorse2)
-        //test end
+            horseList = db.getHorseDao().getAllHorses()
+            Log.d("ShowHorseFragment", "horseList: $horseList")
+        }
 
         val adapter = ShowHorsesAdapter(horseList)
+        Log.d("ShowHorseFragment", "horseList adapter: " + adapter.getItemCount())
 
         b.rvShowAllHorses.adapter = adapter
 
-
-        // TODO is it correct to use requireActivity() as context?
         b.rvShowAllHorses.layoutManager = LinearLayoutManager(requireActivity())
-
-        }
     }
+}
