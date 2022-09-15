@@ -53,6 +53,7 @@ class NewHorseFragment : Fragment(R.layout.fragment_new_horse) {
         val gender = b.spGender.selectedItem.toString()
         val birthYear = b.etBirthYear.text.toString()
         val identification = b.etIdentification.text.toString()
+        //TODO: Make notes a text file?
         val notes = b.etNotes.text.toString()
 
         val inputIsCorrect = inputCheck(name, birthYear, identification)
@@ -71,6 +72,9 @@ class NewHorseFragment : Fragment(R.layout.fragment_new_horse) {
     }
 
     private fun inputCheck(name: String, birthYear: String, identification: String): Boolean{
+
+        // TODO: change toast to textviews under edittexts
+
         var inputCheck = true
         val message: String
         if(name.isEmpty()){

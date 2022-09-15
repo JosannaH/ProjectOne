@@ -5,9 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.josanna.projectone.databinding.ItemInListBinding
-import com.josanna.projectone.entities.Horse
+import com.josanna.projectone.entities.Customer
 
-class ShowHorsesAdapter (var horseList: List<Horse>): RecyclerView.Adapter<ShowHorsesAdapter.MyViewHolder>(){
+class ShowCustomersAdapter (var customerList: List<Customer>): RecyclerView.Adapter<ShowCustomersAdapter.MyViewHolder>(){
 
     private lateinit var binding : ItemInListBinding
 
@@ -22,12 +22,12 @@ class ShowHorsesAdapter (var horseList: List<Horse>): RecyclerView.Adapter<ShowH
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.itemView.apply {
-            binding.tvItemInList.text = horseList[position].name + "\n" + horseList[position].gender
-            //TODO show owner of horse
+            binding.tvItemInList.text = customerList[position].firstName + "\n" + customerList[position].lastName
+            //TODO: add data to tell customers apart if they have the same name
         }
     }
 
     override fun getItemCount(): Int {
-        return horseList.size
+        return customerList.size
     }
 }

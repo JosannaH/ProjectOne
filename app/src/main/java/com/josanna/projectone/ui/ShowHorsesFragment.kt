@@ -8,22 +8,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.josanna.projectone.R
 import com.josanna.projectone.ShowHorsesAdapter
 import com.josanna.projectone.database.MyDatabase
-import com.josanna.projectone.databinding.FragmentNewHorseBinding
 import com.josanna.projectone.databinding.FragmentShowHorsesBinding
 import com.josanna.projectone.entities.Horse
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 class ShowHorsesFragment : Fragment(R.layout.fragment_show_horses) {
 
-    private lateinit var b: FragmentShowHorsesBinding
+    private lateinit var binding: FragmentShowHorsesBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        b = FragmentShowHorsesBinding.bind(view)
+        binding = FragmentShowHorsesBinding.bind(view)
 
         val db = MyDatabase.getInstance(requireContext())
         var horseList = listOf<Horse>()
@@ -37,8 +33,8 @@ class ShowHorsesFragment : Fragment(R.layout.fragment_show_horses) {
         val adapter = ShowHorsesAdapter(horseList)
         Log.d("ShowHorseFragment", "horseList adapter: " + adapter.getItemCount())
 
-        b.rvShowAllHorses.adapter = adapter
+        binding.rvShowAllHorses.adapter = adapter
 
-        b.rvShowAllHorses.layoutManager = LinearLayoutManager(requireActivity())
+        binding.rvShowAllHorses.layoutManager = LinearLayoutManager(requireActivity())
     }
 }
