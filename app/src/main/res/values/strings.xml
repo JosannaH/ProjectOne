@@ -26,7 +26,6 @@
     <string name="Fill_in_birth_year">Fill in birth year, only numbers</string>
     <string name="fill_in_name">Fill in name</string>
     <string name="fill_in_identification">Fill in identification</string>
-    <string name="horse_is_saved">Horse is saved</string>
     <string name="show_customers">Show Customers</string>
     <string name="all_customers">All Customers</string>
     <string name="fill_in_firstName">Fill in first name</string>
@@ -35,6 +34,8 @@
     <string name="fill_in_postCode">Fill in post code</string>
     <string name="fill_in_city">Fill in city</string>
     <string name="fill_in_phone">Fill in phone, only digits and hyphen allowed</string>
+    <string name="has_been_saved"> has been saved!</string>
+    <string name="search_customer">Search customer...</string>
 
     <string-array name="genders">
         <item>Mare</item>
